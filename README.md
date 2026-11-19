@@ -12,18 +12,38 @@ C:\Projects\SupportInk
 You should see roughly:
 
 Plain Text
-SupportInk
-├── SupportInk.slnx
-├── README.md
-├── LICENSE.txt
-├── src
-│ └── SupportInk
-│ ├── SupportInk.csproj
-│ ├── App.xaml
-│ ├── OverlayWindow.xaml
-│ ├── ToolbarWindow.xaml
-│ └── ...
-└── tests
+AnnotationApp
+├── Overlay
+│   ├── Transparent fullscreen window
+│   ├── InkCanvas / drawing renderer
+│   └── Multi-monitor handling
+│
+├── Tools
+│   ├── Pen
+│   ├── Highlighter
+│   ├── Eraser
+│   ├── Line / Arrow
+│   ├── Rectangle / Circle
+│   └── Text
+│
+├── Input
+│   ├── Mouse
+│   ├── Stylus
+│   ├── Touch
+│   └── Global hotkeys
+│
+├── UI
+│   ├── Floating toolbar
+│   ├── Colour picker
+│   └── Stroke-size selector
+│
+└── WindowsIntegration
+    ├── System tray
+    ├── Always-on-top
+    ├── Click-through mode
+    ├── Screen capture
+    └── Monitor/DPI management
+
 2. Install Visual Studio
 
 Install Visual Studio 2026 Community or the edition your company provides.
@@ -142,6 +162,7 @@ Best alternatives
 Install the .NET 10 SDK, extract the source, open PowerShell in the SupportInk folder, then:
 
 PowerShell
+dotnet --list-sdks
 dotnet restore
 dotnet build SupportInk.slnx -c Release
 
@@ -179,3 +200,4 @@ eventually code-sign it,
 produce a downloadable build artifact.
 
 This is a much better long-term approach for something you'll rely on during customer support sessions.
+
